@@ -1,0 +1,32 @@
+### Create a new MissingScopeItem
+POST http://localhost:4004/odata/v4/localisation/MissingScopeItems
+Content-Type: application/json
+
+{
+  "customerOrProspect": "Customer",
+  "customerName": "Are Corporation",
+  "oppurtunityNumber": "OPP12345",
+  "priority": "High",
+  "goLiveDate": "2024-12-31",
+  "revenue": "500000",
+  "country": "Germany",
+  "industry": "Automotive",
+  "ScopeItemID": "SI98765",
+  "Description": "New scope item for a major automotive project.",
+  "LOB": "Manufacturing",
+  "BusinessArea": "Production"
+}
+
+### Get all MissingScopeItems
+GET http://localhost:4004/odata/v4/localisation/MissingScopeItems
+Accept: application/json
+
+### 
+PATCH  http://localhost:4004/odata/v4/localisation/MissingScopeItems(100)
+Content-Type: application/json
+
+{
+   "brandGuardianStatus": "implemented",
+  "globalServicesStatus": "implemente"
+}
+

@@ -75,20 +75,32 @@ entity ScopeItems {
 
 
 entity MissingScopeItems {
-  key autoId             : UUID;
+  key autoId             : Integer;
       customerOrProspect : String;
       customerName       : String;
+      brandGuardianStatus : String ;
+      globalServicesStatus : String ;
       oppurtunityNumber  : String;
+      
       priority           : String; //low or medium or high
       goLiveDate         : Date;
       revenue            : String;
       country            : String; //  multiple country selector
       industry           : String; //  multiple industry selector
       createdBy          : String default 'Nywald';
-      createdOn          : DateTime @cds.on.insert: $now;
+      createdOn          : Date @cds.on.insert: $now;
       ScopeItemID        : String; // Adjust the length as per your requirement
       Description        : String; // Adjust the length as per your requirement
       LOB                : String; // Line of Business
       BusinessArea       : String;
 
 }
+
+
+
+// In your service definition (e.g., `srv/Service.cds`)
+entity DropdownValues {
+    key name: String;
+    Text: String;
+}
+
